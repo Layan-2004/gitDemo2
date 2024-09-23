@@ -19,5 +19,8 @@ public class App {
         for (int i = 0; i < names.size(); i++) {
             System.out.println("Student{name='" + names.get(i) + "', age=" + ages.get(i) + "}");
         }
+        int totalAge = ages.stream().mapToInt(Integer::intValue).sum();
+        System.out.println("Average age of students: " + (double) totalAge / ages.size());
+
     }
 }
